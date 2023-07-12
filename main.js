@@ -51,7 +51,6 @@ function clickedSquare (e) {
 
     if (clickedSquare.innerHTML == '') {
       if (letterSelected != undefined) {
-        debugger
         clickedSquare.innerHTML = `<p class="text-center fs-1 align-middle"  id="${e.target.id}}-text">${letterSelected}</p>`
         clickedSquare.disabled = true // Set the disabled attribute to true
         clickedSquare.style.opacity = '0.7' // For visual indication (optional)
