@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <title>Tic Tac Toe</title>
+    <link rel="icon" type="image/x-icon" href="./img/tic-tac-toe.png" />
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="text-center">Tic Tac Toe</h1>
+      <p class="text-center" id="gameText">
+        Welcome to Tic Tac Toe! Press the button to play the game!
+      </p>
+      <button type="button" class="btn btn-dark" id="play" onclick="playGame()">
+        Play
+      </button>
+    </header>
+    <!-- Modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#staticBackdrop"
+      id="backdropbutton"
+    >
+      Launch static backdrop modal
+    </button>
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      aria-labelledby="staticBackdropLabel"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="modalBody"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              onclick="playGame()"
+            >
+              Okay 👍
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="main">
+      <!--Primera fila -->
+      <div class="row">
+        <div class="col gameboard" onclick="clickedSquare(event)" id="0"></div>
+        <div class="col gameboard" id="1" onclick="clickedSquare(event)"></div>
+        <div class="col gameboard" id="2" onclick="clickedSquare(event)"></div>
+      </div>
+      <!--Segunda fila -->
+      <div class="row">
+        <div class="col gameboard" id="3" onclick="clickedSquare(event)"></div>
+        <div class="col gameboard" id="4" onclick="clickedSquare(event)"></div>
+        <div class="col gameboard" id="5" onclick="clickedSquare(event)"></div>
+      </div>
+      <!--Tercera fila -->
+      <div class="row">
+        <div class="col gameboard" id="6" onclick="clickedSquare(event)"></div>
+        <div class="col gameboard" id="7" onclick="clickedSquare(event)"></div>
+        <div class="col gameboard" id="8" onclick="clickedSquare(event)"></div>
+      </div>
+    </div>
+  </body>
+</html>
